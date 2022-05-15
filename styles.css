@@ -1,0 +1,176 @@
+:root {
+    --primary: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-blue: hsl(216, 12%, 8%);
+}
+
+body{
+    font-size: 0.9375rem;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--very-blue);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-image: linear-gradient(to top, var(--dark-blue), hsl(213, 19%, 25%));
+    margin-left: .75rem;
+    margin-right: .75rem;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    opacity: 0;
+    transition: opacity 700ms ease;
+}
+
+.card h1{
+    color: white;
+}
+
+.card p{
+    color: var(--light-grey);
+}
+.card .hero-image {
+    text-align: center;
+}
+
+.card .selected {
+    color: var(--primary);
+    text-align: center;
+    padding: .5rem .8rem .5rem .8rem;
+    background-color:hsl(213, 19%, 25%);
+    border-radius: 2rem;
+    width: 55%;
+    margin: 1rem auto 1rem auto;
+  
+}
+
+.card button{
+    cursor:pointer;
+    background-color: var(--primary);
+    width: 100%;
+    padding-top: 1rem;    
+    padding-bottom: 1rem;    
+    border-radius: 2rem;
+    margin-top: .75rem;
+    text-transform: uppercase;
+    color: hsl(25, 97%,90%);
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border: none;
+    transition: color 500ms, background-color 500ms;
+}
+
+.card button:hover{
+    background-color: white;
+    color: var(--primary);
+}
+
+.rating {
+    padding-left: 0;
+    margin-top: 1.5rem;
+    list-style-type: none;
+    text-align: center;
+}
+
+.rating li {
+    cursor: pointer;
+    text-align: center;
+    background-color: hsl(213, 19%, 25%);
+    width: 1rem;
+    height: 1rem;
+    padding: 1rem;
+    border-radius: 100%;
+    color: var(--light-grey);
+    display: inline-block;
+    transition: color .6s, background-color .6s;
+}
+
+.rating li:hover {
+    background-color: var(--light-grey);
+    color: white;
+}
+
+.rating .active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.rating .active:hover {
+    background-color: var(--primary);
+    color: white;
+}
+.text-center {
+    text-align: center;
+}
+
+
+.rating :not(li:last-child) {
+    margin-right:.4rem;
+}
+
+.show {
+    opacity: 1;  
+}
+
+.hide{
+    display: none; 
+}
+
+
+.circle{
+    background-color: hsl(213, 19%, 30%);
+    width: 1.065rem;
+    height: 1rem;
+    padding: .5rem;
+    border-radius: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 30%;
+    }
+}
+
+
+@media only screen and (min-width: 1440px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rating :not(li:last-child) {
+        margin-right:1rem;
+    }
+    
+    .card {
+        width: 25%;
+    }
+}
+
+
