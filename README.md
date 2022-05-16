@@ -9,4 +9,4 @@ Technologies I used for this are
 
 You can click on the link below for a live preview:
 
-[Link to preview](https://candid-lokum-95d56b.netlify.app)
+[Link to preview](https://fe-project1.netlify.app/)
