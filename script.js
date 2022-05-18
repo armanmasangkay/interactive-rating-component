@@ -8,17 +8,18 @@ const errorElement = document.getElementById("error");
 
 let selectedRating = 0;
 
+
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
         setTimeout(() => {
-            ratingCard.classList.add('show');
-        }, 1000); 
+            ratingCard.classList.add("show");
+        }, 500); 
     }
 };
 
 rating.addEventListener('click', (e) => {
     e.target.classList.toggle("active");
-    selectedRating = parseInt(e.target.innerHTML);
+    selectedRating = e.target.classList.contains('active') ? parseInt(e.target.innerHTML) : 0;
     rating.childNodes.forEach((element) => {
         if(! element.isEqualNode(e.target) && element.tagName === 'LI') {
             element.classList.remove("active");
@@ -27,7 +28,6 @@ rating.addEventListener('click', (e) => {
 });
 
 submitButton.addEventListener('click', (e) => {
-
     if(selectedRating === 0 || isNaN(selectedRating)) {
         errorElement.classList.remove('hide');
         setTimeout(() => {
